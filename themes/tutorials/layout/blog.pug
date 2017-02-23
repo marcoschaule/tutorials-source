@@ -1,0 +1,7 @@
+extends _partial/layout-default
+
+block content
+  each post in site.posts.toArray()
+    h3: a(href=post.path)= post.title
+    p: != post.excerpt
+

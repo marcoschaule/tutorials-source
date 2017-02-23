@@ -1,7 +1,8 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  About: /about.html
+  Imprint: /imprint.html
 rss: /atom.xml
 
 # Content
