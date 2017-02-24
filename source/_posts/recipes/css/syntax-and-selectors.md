@@ -1,10 +1,15 @@
 ---
-title: Blog
-date: 2017-02-23 21:29:20
+title: Syntax and Selectors
+date: 2017-02-24 11:00:00
 layout: post
+category:
+- recipes
+- css
 ---
 
-# Syntax and Selectors
+This post describes the basic CSS syntax and how selectors work.
+<!-- more --> 
+
 ## Overview
 
 * The CSS syntax is quite simple. It always starts with the **Selector**,
@@ -46,9 +51,9 @@ div.some-class-name {
 
 /* example of media queries: */
 @media only screen and (max-width: 500px) {
-  body {
-    background-color: lightblue;
-  }
+    body {
+        background-color: lightblue;
+    }
 }
 ```
 

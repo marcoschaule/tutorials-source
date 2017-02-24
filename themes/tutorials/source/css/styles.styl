@@ -4,15 +4,22 @@
 // import fonts from GoogleFonts
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900|Merriweather:300|Source+Code+Pro')
 
+// import partials
+@import _variables
+@import _highlight
+@import _posts
+
 // *****************************************************************************
 // Common tags
 // *****************************************************************************
 
 *
   border-radius 4px
-  color #333
   font-family 'Merriweather', serif
   font-weight 300
+
+h1, h2, h3, h4, h5, h6, p, li
+  color #333
 
 html
   font-size 20px
@@ -25,7 +32,10 @@ h1, h1 *
   margin-bottom 2rem
   text-align center
 
-h1:hover, h1:hover *
+h1 a
+  text-decoration none
+
+h1 a:hover, h1 a:hover *
   color #0076df
 
 h2, h2 *, h3, h3 *, h4, h4 *
@@ -35,12 +45,14 @@ h2, h2 *, h3, h3 *, h4, h4 *
 h1, h2, h3, h4, h5, h6
   margin-top 1em
 
-ul a, ol a, p a
+a
   color #0076df
-  text-decoration underline
+  &:hover
+    color inherit
+    text-decoration underline
 
-ul a:hover, ol a:hover, p a:hover
-  color inherit
+li
+  margin-bottom .25rem
 
 hr
   background-color #ccc
@@ -53,6 +65,15 @@ hr
 // Common classes
 // *****************************************************************************
 
+.columns-2
+  -webkit-column-count 2
+  -moz-column-count 2
+  column-count 2
+  -webkit-column-gap 4rem
+  -moz-column-gap 4rem
+  column-gap 4rem
+  overflow hidden
+
 .columns-3
   -webkit-column-count 3
   -moz-column-count 3
@@ -60,6 +81,7 @@ hr
   -webkit-column-gap 4rem
   -moz-column-gap 4rem
   column-gap 4rem
+  overflow hidden
 
 // *****************************************************************************
 // Header
@@ -76,6 +98,9 @@ hr
     font-size 4rem
     font-weight bold
     line-height 1em
+    text-decoration none
+    &:hover
+      color #0076df
 
 #subtitle
   color #666
@@ -95,17 +120,17 @@ hr
     text-decoration none
     &:first-child
       border-left none
-
-#navigation a:hover,
-#navigation a.active
-  background-color #e4e4e4
+    &:hover
+      background-color #e4e4e4
+    .active
+      background-color #e4e4e4
 
 // *****************************************************************************
 // Footer
 // *****************************************************************************
 
 #footer
-  margin-top 4rem
+  margin 4rem 0
   text-align center
 
 // *****************************************************************************
@@ -116,3 +141,11 @@ hr
   color #aaa
   font-style italic
   text-align center
+
+// *****************************************************************************
+// Page welcome
+// *****************************************************************************
+
+.page-welcome .columns-2 h5:first-child,
+.page-welcome .columns-3 h5:first-child
+  margin-top 0

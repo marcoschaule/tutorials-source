@@ -4,8 +4,8 @@
 
 # Site
 title: Tutorials
-subtitle: Lists of short tutorials.
-description: Lists of short tutorials, recipes and best practices.
+subtitle: Learning by Recipes.
+description: Lists of short recipes for newcomers and changers.
 author: Marco Schaule
 language: en
 timezone:
@@ -14,8 +14,9 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://localhost:4000
 root: /
-permalink: :year/:month/:day/:title/
+permalink: /:title.html # :year/:month/:day/:title/
 permalink_defaults:
+  lang: :lang
 
 # Directory
 source_dir: source
@@ -36,6 +37,7 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
+excerpt_depth: 2
 future: true
 highlight:
   enable: true
@@ -52,7 +54,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: DD/MM/YYYY
 time_format: HH:mm:ss
 
 # Pagination
@@ -76,6 +78,6 @@ kramed:
   pedantic: false
   sanitize: false
   tables: true
-  breaks: true
+  breaks: false
   smartLists: true
   smartypants: true

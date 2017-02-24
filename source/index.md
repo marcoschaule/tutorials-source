@@ -1,100 +1,94 @@
 ---
-title: Welcome
+title: welcome
 date: 2017-02-23 19:27:20
-layout: page
+layout: index
 ---
-
-# Content
-
-Learning by Recipes.
-
-## Frontend Tutorials
 ##### HTML Basics
 
-* [Doctype](texts/html/doctype.md)
-* [Head and body elements](texts/html/head-and-body-elements.md)
-* [Classes and IDs](texts/html/classes-and-ids.md)
-* [Inline and block elements](texts/html/inline-and-block-elements.md)
-* [Headings and paragraphs](texts/html/headings-and-paragraphs.md)
-* [Anchors and links](texts/html/anchors-and-links.md)
-* [Lists](texts/html/lists.md)
-* [Tables](texts/html/tables.md)
-* [Entities](texts/html/entities.md)
-* [Cache](texts/html/cache.md)
+* [Doctype](recipes/html/doctype.html)
+* [Head and body elements](recipes/html/head-and-body-elements.html)
+* [Classes and IDs](recipes/html/classes-and-ids.html)
+* [Inline and block elements](recipes/html/inline-and-block-elements.html)
+* [Headings and paragraphs](recipes/html/headings-and-paragraphs.html)
+* [Anchors and links](recipes/html/anchors-and-links.html)
+* [Lists](recipes/html/lists.html)
+* [Tables](recipes/html/tables.html)
+* [Entities](recipes/html/entities.html)
+* [Cache](recipes/html/cache.html)
 
 ##### HTML Advanced
 
-* [Forms](texts/html/forms.md)
-* [Fonts](texts/html/fonts.md)
-* [HTML5](texts/html/html5.md)
-* [iFrames](texts/html/iframes.md)
+* [Forms](recipes/html/forms.html)
+* [Fonts](recipes/html/fonts.html)
+* [HTML5](recipes/html/html5.html)
+* [iFrames](recipes/html/iframes.html)
 
 ##### CSS Basics
 
-* [Syntax and selectors](texts/css/syntax-and-selectors.md)
-* [Heights and widths](texts/css/heights-and-widths.md)
-* [Margin](texts/css/margin.md)
-* [Padding](texts/css/padding.md)
-* [Display](texts/css/display.md)
-* [Position](texts/css/position.md)
-* [Alignment and floating](texts/css/syntax-and-selectors.md)
-* [Fonts and texts](texts/css/syntax-and-selectors.md)
+* [Syntax and selectors](recipes/css/syntax-and-selectors.html)
+* [Heights and widths](recipes/css/heights-and-widths.html)
+* [Margin](recipes/css/margin.html)
+* [Padding](recipes/css/padding.html)
+* [Display](recipes/css/display.html)
+* [Position](recipes/css/position.html)
+* [Alignment and floating](recipes/css/syntax-and-selectors.html)
+* [Fonts and texts](recipes/css/syntax-and-selectors.html)
 
 ##### CSS Advanced
 
-* [Box model](texts/css/syntax-and-selectors.md)
-* [Flexbox](texts/css/syntax-and-selectors.md)
-* [Attribute selectors](texts/css/syntax-and-selectors.md)
-* [Media Queries](texts/css/syntax-and-selectors.md)
-* [CSS Grids](texts/css/syntax-and-selectors.md)
+* [Box model](recipes/css/syntax-and-selectors.html)
+* [Flexbox](recipes/css/syntax-and-selectors.html)
+* [Attribute selectors](recipes/css/syntax-and-selectors.html)
+* [Media Queries](recipes/css/syntax-and-selectors.html)
+* [CSS Grids](recipes/css/syntax-and-selectors.html)
 
 ##### Web Basics
 
-* [Classical Web Applications]('texts/')
-* [Single Page Applications with AJAX]('texts/')
-* [Same Origin Policy]('texts/')
+* [Classical Web Applications](recipes/)
+* [Single Page Applications with AJAX](recipes/)
+* [Same Origin Policy](recipes/)
 
 ##### JavaScript Basics
 ##### JavaScript Advanced
 
 ##### Asynchronous JavaScript
 
-* [Callbacks](texts/javascript/callbacks.md)
-* [Async](texts/javascript/async.md)
-* [Promises](texts/javascript/promises.md)
+* [Callbacks](recipes/javascript/callbacks.html)
+* [Async](recipes/javascript/async.html)
+* [Promises](recipes/javascript/promises.html)
 
 ##### AngularJS 1.x Basics
 
-* [Features]('texts/')
-* [Model View Viewmodel (MVVM) Pattern]('texts/')
-* [Dependency Injection Pattern]('texts/')
-* [Two-way Binding]('texts/')
-* [Controllers]('texts/')
-* [Services and Models]('texts/')
+* [Features](recipes/)
+* [Model View Viewmodel (MVVM) Pattern](recipes/)
+* [Dependency Injection Pattern](recipes/)
+* [Two-way Binding](recipes/)
+* [Controllers](recipes/)
+* [Services and Models](recipes/)
 
 ##### AngularJS 1.x Unit Testing
 
-* [Setting up Karma]('texts/')
-* [Testing Config and Run]('texts/')
-* [Testing Services]('texts/')
-* [Testing Controllers]('texts/')
-* [Testing Routing]('texts/')
-* [Testing HTTP]('texts/')
-* [Testing Promises]('texts/')
-* [Testing Watchers and Events]('texts/')
-* [Test Driven Development]('texts/')
+* [Setting up Karma](recipes/)
+* [Testing Config and Run](recipes/)
+* [Testing Services](recipes/)
+* [Testing Controllers](recipes/)
+* [Testing Routing](recipes/)
+* [Testing HTTP](recipes/)
+* [Testing Promises](recipes/)
+* [Testing Watchers and Events](recipes/)
+* [Test Driven Development](recipes/)
 
 ##### AngularJS 1.x EndToEnd and Acceptance Testing
 
-* [Setting up Protractor]('texts/')
-* [Testing Conditions]('texts/')
-* [Testing Events]('texts/')
-* [Setting up CucumberJS]('texts/')
-* [Testing with Gherkin]('texts/')
-* [Behaviour Driven Development]('texts/')
+* [Setting up Protractor](recipes/)
+* [Testing Conditions](recipes/)
+* [Testing Events](recipes/)
+* [Setting up CucumberJS](recipes/)
+* [Testing with Gherkin](recipes/)
+* [Behaviour Driven Development](recipes/)
 
 ##### System and API Design
 
-* [Domain Driven Design]('texts/')
-* [REST]('texts/')
-* [Model View Controller (MVC) Pattern]('texts/')-->
+* [Domain Driven Design](recipes/)
+* [REST](recipes/)
+* [Model View Controller (MVC) Pattern](recipes/)
