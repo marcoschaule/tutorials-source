@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://localhost:4000
-root: /
+url: http://marcoschaule.github.io/tutorials
+root: /tutorials/
 permalink: /:title.html # :year/:month/:day/:title/
 permalink_defaults:
   lang: :lang
@@ -72,7 +72,7 @@ theme: tutorials
 deploy:
   type: git
   repo: https://github.com/marcoschaule/tutorials.git
-  branch: source
+  branch: master
 
 # Kramdown markdown settings
 kramed:
