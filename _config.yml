@@ -72,7 +72,7 @@ theme: tutorials
 deploy:
   type: git
   repo: https://github.com/marcoschaule/tutorials.git
-  branch: master
+  branch: source
 
 # Kramdown markdown settings
 kramed:
