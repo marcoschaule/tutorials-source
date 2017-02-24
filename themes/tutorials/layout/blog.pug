@@ -1,0 +1,17 @@
+extends _partial/layout-default
+
+block content
+  each post in site.posts.toArray()
+    .post-preview
+      div.date
+        != date(post.date)
+      h3.title
+        a(href=post.path)= post.title
+        // - console.log(post.categories.data)
+        if post.categories && post.categories.data
+          - var arrCats = post.categories.data.reverse();
+          each cat in arrCats
+            a.category(href="")= cat.name
+      div.excerpt
+        != post.excerpt
+

@@ -1,0 +1,151 @@
+// define charset for css files
+@charset "UTF-8"
+
+// import fonts from GoogleFonts
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|Merriweather:300|Source+Code+Pro')
+
+// import partials
+@import _variables
+@import _highlight
+@import _posts
+
+// *****************************************************************************
+// Common tags
+// *****************************************************************************
+
+*
+  border-radius 4px
+  font-family 'Merriweather', serif
+  font-weight 300
+
+h1, h2, h3, h4, h5, h6, p, li
+  color #333
+
+html
+  font-size 20px
+  line-height 1.5
+
+h1, h1 *
+  font-family 'Lato', sans-serif
+  font-weight bold
+  font-size 3rem
+  margin-bottom 2rem
+  text-align center
+
+h1 a
+  text-decoration none
+
+h1 a:hover, h1 a:hover *
+  color #0076df
+
+h2, h2 *, h3, h3 *, h4, h4 *
+  font-family 'Lato', sans-serif
+  font-weight bold
+
+h1, h2, h3, h4, h5, h6
+  margin-top 1em
+
+a
+  color #0076df
+  &:hover
+    color inherit
+    text-decoration underline
+
+li
+  margin-bottom .25rem
+
+hr
+  background-color #ccc
+  border none
+  height 2px
+  margin 2rem auto
+  width 4rem
+
+// *****************************************************************************
+// Common classes
+// *****************************************************************************
+
+.columns-2
+  -webkit-column-count 2
+  -moz-column-count 2
+  column-count 2
+  -webkit-column-gap 4rem
+  -moz-column-gap 4rem
+  column-gap 4rem
+  overflow hidden
+
+.columns-3
+  -webkit-column-count 3
+  -moz-column-count 3
+  column-count 3
+  -webkit-column-gap 4rem
+  -moz-column-gap 4rem
+  column-gap 4rem
+  overflow hidden
+
+// *****************************************************************************
+// Header
+// *****************************************************************************
+
+#header
+  text-align center
+
+#title
+  margin 4rem 0 1rem 0
+  a
+    color inherit
+    font-family 'Lato', sans-serif
+    font-size 4rem
+    font-weight bold
+    line-height 1em
+    text-decoration none
+    &:hover
+      color #0076df
+
+#subtitle
+  color #666
+  margin-bottom 4rem
+
+// *****************************************************************************
+// Naviation
+// *****************************************************************************
+
+#navigation
+  text-align center
+  margin-bottom 6rem
+  a
+    border-left 1px solid #e4e4e4
+    color inherit
+    padding .5rem 2rem
+    text-decoration none
+    &:first-child
+      border-left none
+    &:hover
+      background-color #e4e4e4
+    .active
+      background-color #e4e4e4
+
+// *****************************************************************************
+// Footer
+// *****************************************************************************
+
+#footer
+  margin 4rem 0
+  text-align center
+
+// *****************************************************************************
+// Posts
+// *****************************************************************************
+
+.post-date
+  color #aaa
+  font-style italic
+  text-align center
+
+// *****************************************************************************
+// Page welcome
+// *****************************************************************************
+
+.page-welcome .columns-2 h5:first-child,
+.page-welcome .columns-3 h5:first-child
+  margin-top 0

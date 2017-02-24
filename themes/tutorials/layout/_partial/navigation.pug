@@ -1,0 +1,2 @@
+each path, title in site.data.menu
+  a(href=url_for(path) class=is_current(path) ? 'active' : '')= titlecase(title)
