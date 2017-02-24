@@ -1,6 +1,7 @@
 # Project files
 node_modules/
 .idea
+.vscode
 
 # Common files
 .DS_Store
