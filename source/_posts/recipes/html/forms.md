@@ -1,6 +1,15 @@
-### HTML - Advanced - Forms
+---
+title: Forms
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Form tag
+
+
+## Form tag
 
 * Forms are the containers of form elements and field sets.
 * Forms can be represented by JavaScript frameworks.
@@ -29,7 +38,7 @@ Links:
 * [selfhtml.org](https://wiki.selfhtml.org/wiki/Form)
 * [w3c.org](https://www.w3.org/TR/html5/forms.html#the-form-element)
 
-#### Input fields
+## Input fields
 
 * There are plenty of input fields.
 * Some of them are available since early HTML, some
@@ -115,7 +124,7 @@ Links:
 * [selfhtml.org](https://wiki.selfhtml.org/wiki/Input)
 * [w3c.org](https://www.w3.org/TR/html5/forms.html#the-input-element)
 
-#### Buttons
+## Buttons
 
 * Besides the input buttons, you can create
   modern buttons with the `button` tag.
@@ -151,7 +160,7 @@ Links:
 * [selfhtml.org](https://wiki.selfhtml.org/wiki/Button)
 * [w3c.org](https://www.w3.org/TR/html5/forms.html#the-button-element)
 
-#### Textarea
+## Textarea
 
 * The `textarea` as - as the name suggests - an area for text.
 * The 'value' of the text area is the text within the area itself.
@@ -171,7 +180,7 @@ Links:
 * [w3c.org](https://www.w3.org/TR/html5/forms.html#the-button-element)
 
 
-#### Labels
+## Labels
 
 * Labels are captions for form fields.
 * The label's `for` attribute is related to the form control's
@@ -207,7 +216,7 @@ Links:
 * [selfhtml.org](https://wiki.selfhtml.org/wiki/Label#label)
 * [w3c.org](https://www.w3.org/TR/html5/forms.html#the-label-element)
 
-#### Field sets and legend
+## Field sets and legend
 
 * Field sets collect form elements. They are used to group input and label
   or groups of inputs.
@@ -246,7 +255,7 @@ Links:
 * [selfhtml.org](https://wiki.selfhtml.org/wiki/Fieldset)
 * [w3c.org](https://www.w3.org/TR/html5/forms.html#the-fieldset-element)
 
-#### Selects and options
+## Selects and options
 
 * `select` elements (also known as drop downs if number of lines is 1)
   are fields from which you can select one (or more) values
@@ -292,7 +301,7 @@ Example (with label and option group):
 ```
   
 
-#### Other form elements
+## Other form elements
 
 There are other form elements
 (like `datalist`, `keygen`, `output`, `progress`, `meter`)

@@ -1,6 +1,15 @@
-### HTML - Basics - Inline and block elements
+---
+title: Inline and block elements
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Block elements
+
+
+## Block elements
 
 Block elements are elements, that create their own block area.
 If you use such an element, the HTML and text within that block
@@ -24,7 +33,7 @@ Often used block elements are for example:
 body, div, h1, h2, h3, h4, h5, h6, p, form, fieldset, table, tr ...
 ```
 
-#### Inline elements
+## Inline elements
 
 Inline elements are the opposite of block elements, namely elements that exist
 within a line and won't force a newline or break.
@@ -47,7 +56,7 @@ Often used inline elements are for example:
 span, input, button ...
 ```
 
-#### The `br` element and other linebreaks
+## The `br` element and other linebreaks
 
 The break element is special, since it is an inline element but creates a linebreak.
 

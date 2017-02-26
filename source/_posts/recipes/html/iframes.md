@@ -1,6 +1,15 @@
-### HTML - Advanced - iFrames
+---
+title: iFrames
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Overview
+
+
+## Overview
 
 * `iframe`s are elements to embed external web pages into a parent one.
 * iFrames are potentially dangerous, but can be used safely if
@@ -38,4 +47,4 @@ Links:
 * [w3c.org](https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html)
 * [caniuse.com](http://caniuse.com/#search=sandbox)
 
-#### Best Practices and Code Conventions
+## Best Practices and Code Conventions

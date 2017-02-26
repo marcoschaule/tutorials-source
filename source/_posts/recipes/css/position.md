@@ -7,7 +7,9 @@ category:
 - css
 ---
 
-
+This post describes the `position` property, which defines the location
+of an element relative to its environment elements.
+<!-- more -->
 
 ## Overview
 

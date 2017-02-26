@@ -1,6 +1,15 @@
-### HTML - Basics - Lists
+---
+title: Lists
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Unordered lists
+
+
+## Unordered lists
 
 This HTML:
 ``` html
@@ -18,7 +27,7 @@ produces that result:
   • Item 3
 ```
 
-##### Unordered Lists as Navigation
+### Unordered Lists as Navigation
 
 You can use unordered lists as navigation. To do so, you have to restyle
 the list according to your needs.
@@ -32,7 +41,7 @@ Links:
 [selfhtml.org](https://wiki.selfhtml.org/wiki/Ul),
 [w3c.org](https://www.w3.org/TR/html5/grouping-content.html#the-ul-element)
 
-#### Ordered lists
+## Ordered lists
 
 This HTML:
 ``` html
@@ -56,7 +65,7 @@ Links:
 [selfhtml.org](https://wiki.selfhtml.org/wiki/Ol),
 [w3c.org](https://www.w3.org/TR/html5/grouping-content.html#the-ol-element)
 
-#### Description lists
+## Description lists
 
 This HTML:
 ``` html
@@ -82,7 +91,7 @@ Links:
 [selfhtml.org](https://wiki.selfhtml.org/wiki/Dl),
 [w3c.org](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element)
 
-#### Legend
+## Legend
 
 * ul = unordered list
 * ol = ordered list

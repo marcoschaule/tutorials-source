@@ -7,6 +7,10 @@ category:
 - css
 ---
 
+This post is about `height`s and `width`s of elements. It also mentions
+the `overflow` attribute that can change the `size` of elements.
+<!-- more -->
+
 ## Overview
 
 * Heights and widths of elements are used to define how wide and long

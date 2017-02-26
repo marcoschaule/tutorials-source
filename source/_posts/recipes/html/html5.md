@@ -1,6 +1,15 @@
-### HTML - Advanced - HTML5 (Semantic Web)
+---
+title: HTML5 (Semantic Web)
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Overview
+
+
+## Overview
 
 * In HTML5, semantic web elements for most common areas were added.
   The mostly used elements are `article`, `header`, `footer`, `nav`

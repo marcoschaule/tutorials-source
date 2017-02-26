@@ -1,6 +1,15 @@
-### Callbacks
+---
+title: Callbacks
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Overview
+
+
+## Overview
 
 * Callbacks are used to execute an action after a current function
   has finished.
@@ -35,7 +44,7 @@ someFunction(function(objErr, objResult) {
 
 ```
 
-#### Callback hell
+## Callback hell
 
 * When working with callbacks, you can run into callback hells.
   The callback hell is the nested calling of callbacks.
@@ -109,9 +118,9 @@ Links:
 * [Hoisting (MDN)](https://developer.mozilla.org/de/docs/Glossary/Hoisting)
 * [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 
-#### Callbacks in loops
+## Callbacks in loops
 
-#### Best Practices
+## Best Practices
 
 * _Do_ write the callback as the last argument of an async function
   definition.

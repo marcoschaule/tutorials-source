@@ -1,10 +1,19 @@
-### HTML - Basics - Head and body tags
+---
+title: Head and body tags
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### `head` tags
+
+
+## `head` tags
 
 These are the most important head tags:
 
-##### `head` tag itself
+### `head` tag itself
 
 It wraps the head itself.
 
@@ -18,7 +27,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#head_tag),
 [w3c.org](https://www.w3.org/TR/html5/document-metadata.html#the-head-element)
 
-##### `title` tag
+### `title` tag
   
 It gives the web page a title, which appears as the
 browser's tab and the bookmark title.  
@@ -33,7 +42,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#title_tag),
 [w3c.org](https://www.w3.org/TR/html5/document-metadata.html#the-title-element)
 
-##### `meta` tag
+### `meta` tag
 
 It adds meta information to the html page.
 
@@ -75,7 +84,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/Meta_element),
 [w3c.org](https://www.w3.org/TR/html5/document-metadata.html#the-meta-element)
 
-##### The charset
+### The charset
 
 To define the encoding of the file, you can use
 * the _BOM_ (_Byte Order Mark_), which would be found at
@@ -93,7 +102,7 @@ Links:
 [w3c.org](https://www.w3.org/TR/encoding/),
 
 
-##### `base` tag
+### `base` tag
   
 It defines the base root path, from which all files are
 included, so that they won't need to prefix their
@@ -140,7 +149,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#base_tag),
 [w3c.org](https://www.w3.org/TR/html5/document-metadata.html#the-base-element)
 
-##### `link` tag
+### `link` tag
   
 It defines a link to another file like CSS styles.
 
@@ -156,7 +165,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#link_tag),
 [w3c.org](https://www.w3.org/TR/html5/document-metadata.html#the-link-element)
 
-##### `style` tag
+### `style` tag
   
 It defines inline styles (which is _not_ loaded from external files).
 
@@ -173,7 +182,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#style_tag),
 [w3c.org](https://www.w3.org/TR/html5/document-metadata.html#the-style-element)
 
-##### `script` tag
+### `script` tag
   
 It loads a script in header if necessary;
 `script`s should be loaded at the end of the body tag if possible.
@@ -191,9 +200,9 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#script_tag),
 [w3c.org](https://www.w3.org/TR/html5/scripting-1.html#the-script-element)
 
-#### `body` tags
+## `body` tags
 
-##### `body` tag
+### `body` tag
 
 It wraps all the body tags.
 
@@ -207,12 +216,12 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#body_tag),
 [w3c.org](https://www.w3.org/TR/html5/sections.html#the-body-element)
   
-##### All the other tags
+### All the other tags
 
 Within the `body`, you can use all non-head tags, which
 will be presented in the following.
 
-#### Best Practices
+## Best Practices
 
 * _Do_ use a `title` tag for the HTML document to be valid.
 * _Do_ put the `style` and `link` tags into the `head`.

@@ -7,7 +7,9 @@ category:
 - css
 ---
 
-
+This post handles about the CSS property `padding` and where it is
+different from the `margin` property.
+<!-- more -->
 
 ## Overview
 

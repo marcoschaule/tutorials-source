@@ -3,7 +3,7 @@ html
   head
     meta(charset="utf8")
     title #{page.title}
-    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css")
     link(rel="stylesheet" type="text/css" href=config.root + "css/styles.css")
     base(href="/tutorials/")
 
@@ -22,5 +22,33 @@ html
       main#content
         block content
 
+      //- include footer
       footer#footer
         include footer
+
+    //- scripts
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script.
+      function _init() {
+        var strQueries = window.location.search.replace('?', '');
+        var arrQueries = strQueries.split('&');
+        var objQueries = {};
+        var arrQuery, nunValue;
+
+        arrQueries.forEach(function(strQuery) {
+          arrQuery                = strQuery.split('=');
+          nunValue                = parseInt(arrQuery[1]);
+          objQueries[arrQuery[0]] = !isNaN(nunValue) ? nunValue : arrQuery[1];
+        });
+        window.numCounterCurrent = objQueries.page || 0;
+        console.log(window.numCounterCurrent);
+        $('.post-preview-group').removeClass('active');
+        $('.post-preview-group-' + window.numCounterCurrent).addClass('active');
+      }
+
+      function getOtherPostPreviews(isOlder) {
+        var numPage = window.numCounterCurrent + (isOlder ? 1 : -1);
+        window.location.href = window.location.href.split('?')[0] + '?page=' + numPage;
+      }
+
+      _init();

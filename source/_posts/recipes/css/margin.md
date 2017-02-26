@@ -7,7 +7,9 @@ category:
 - css
 ---
 
-
+This post handles about the CSS property `margin` and all its quirks.
+It presents the different notations and shows alternatives to margins.
+<!-- more -->
 
 ## Overview
 

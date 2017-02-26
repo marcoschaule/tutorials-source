@@ -1,6 +1,15 @@
-### HTML - Basics - Tables
+---
+title: Tables
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Overview
+
+
+## Overview
 
 Tables should be used to display data in two-dimensional lists.
 Do not use tables to structure you web page.
@@ -27,7 +36,7 @@ produces that result:
   Item 4    Item 5    Item 6
 ```
 
-#### Table data width and height without CSS
+## Table data width and height without CSS
 
 * To define the widths of cols without CSS, use the `width` attribute.
 * If you use n cols (table data elements), you only to define only n-1
@@ -53,7 +62,7 @@ Example:
 </table>
 ```
 
-#### Table head, body and foot
+## Table head, body and foot
 
 You can specify the head, the foot and the body of a table.
 ``` html
@@ -76,13 +85,13 @@ You can specify the head, the foot and the body of a table.
 </table>
 ```
 
-#### Best Practices
+## Best Practices
 
 * _Do_ use CSS to style the tables. Avoid design attributes.
 * _Do_ use tables only for spreadsheet data, not for web page design.
 * _Don't_ use col groups. Design widths with CSS.
 
-#### Legend and Links
+## Legend and Links
 
 Legend:
 * tr = table row

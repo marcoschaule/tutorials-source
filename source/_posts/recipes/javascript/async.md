@@ -1,6 +1,15 @@
-### The async framework
+---
+title: The async framework
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Overview
+
+
+## Overview
 
 * The `asnyc` framework offers a repertoire of tools to
   handle asynchronous function calls.
@@ -12,7 +21,7 @@
   or using `import`. In Node.js, you use the `require`
   statement.
 
-#### The `async.each` function
+## The `async.each` function
 
 * The `async.each` loop calls all loop functions in parallel and
   fires the final callback when all functions are done.
@@ -40,7 +49,7 @@ async.each([fun1, fun2, fun3, ...],
   });
 ```
 
-#### The `async.eachSeries` function
+## The `async.eachSeries` function
 
 * The `async.eachSeries` loop calls all loop functions in series and
   fires the final callback when all functions are done.
@@ -68,7 +77,7 @@ async.eachSeries([fun1, fun2, fun3, ...],
   });
 ```
 
-#### The `async.waterfall` function
+## The `async.waterfall` function
 
 * The `async.waterfall` loop calls all loop functions in series and
   fires the final callback when all functions are done.

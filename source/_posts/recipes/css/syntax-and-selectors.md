@@ -7,7 +7,7 @@ category:
 - css
 ---
 
-This post describes the basic CSS syntax and how selectors work.
+This post describes the basic CSS syntax and how selectors work. This post describes the basic CSS syntax and how selectors work.
 <!-- more --> 
 
 ## Overview

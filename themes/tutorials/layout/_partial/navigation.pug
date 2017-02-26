@@ -1,2 +1,4 @@
-each path, title in site.data.menu
-  a(href=url_for(path) class=is_current(path) ? 'active' : '')= titlecase(title)
+each strPath, strTitle in site.data.menu
+  - var strActualPath = strPath === '/' ? 'index' : strPath
+  - var isCurrent = url.indexOf(strActualPath) >= 0
+  a(href=url_for(strPath) class=(isCurrent ? 'active' : ''))= titlecase(strTitle)

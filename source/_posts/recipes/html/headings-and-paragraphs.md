@@ -1,6 +1,15 @@
-### HTML - Basics - Headings and paragraphs
+---
+title: Headings and paragraphs
+date: 2017-02-24 11:00:00
+layout: post
+category:
+- recipes
+- html
+---
 
-#### Headings
+
+
+## Headings
 
 * There are six headings HTML: `h1` to `h6`.
 * They are block elements by default.
@@ -23,7 +32,7 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#h1_tag),
 [w3c.org](https://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements)
 
-#### Paragraphs
+## Paragraphs
 
 * Paragraphs `p` are areas of text.
 * By default, they are block elements.
@@ -48,13 +57,13 @@ Links:
 [WikiPedia](https://en.wikipedia.org/wiki/HTML_element#p_tag),
 [w3c.org](https://www.w3.org/TR/html5/grouping-content.html#the-p-element)
 
-#### Best Practices
+## Best Practices
 
 * _Do_ use headings for categorise your texts.
 * _Do_ use paragraphs for text and text design elements only.
 * _Don't_ use paragraphs for document structure.
 
-#### Legend
+## Legend
 
 * p = Paragraph
 * h1 = heading 1 

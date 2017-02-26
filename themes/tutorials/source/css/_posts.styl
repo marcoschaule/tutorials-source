@@ -3,21 +3,33 @@
 // *****************************************************************************
 
 .post-preview
-  margin-bottom 2rem
-  .date
+  margin-bottom 4rem
+  .post-preview-date
     margin 0
     color #999
-  .title
+  .post-preview-title
     margin-top 0
-  .title .category
-    border-left 1px solid #999
-    border-radius 0
-    color #999
+  .post-preview-category
     font-family 'Merriweather', serif
-    font-size .5em
-    font-weight normal
-    margin-left .75rem
-    padding-left .75rem
-    &:first-child
-      margin-left 1rem
+    font-size .6em
+    margin-left .25rem
+    *
+      font-weight normal
+    .post-preview-bullet
+      color #999
+    .post-preview-link
+      color #555
 
+.post-preview-group
+  display none
+.post-preview-group.active
+  display block 
+
+// *****************************************************************************
+// Posts
+// *****************************************************************************
+
+.post-date
+  color #aaa
+  font-style italic
+  text-align center

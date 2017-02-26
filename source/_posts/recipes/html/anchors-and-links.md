@@ -7,7 +7,9 @@ category:
 - html
 ---
 
-
+This post is about `anchor`s and links, which are anchors with a hyper
+reference attribute (`href`).
+<!-- more -->
 
 ## Anchors
 

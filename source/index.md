@@ -3,7 +3,7 @@ title: welcome
 date: 2017-02-23 19:27:20
 layout: index
 ---
-##### HTML Basics
+## HTML Basics
 
 * [Doctype](recipes/html/doctype.html)
 * [Head and body elements](recipes/html/head-and-body-elements.html)
@@ -16,14 +16,14 @@ layout: index
 * [Entities](recipes/html/entities.html)
 * [Cache](recipes/html/cache.html)
 
-##### HTML Advanced
+## HTML Advanced
 
 * [Forms](recipes/html/forms.html)
 * [Fonts](recipes/html/fonts.html)
 * [HTML5](recipes/html/html5.html)
 * [iFrames](recipes/html/iframes.html)
 
-##### CSS Basics
+## CSS Basics
 
 * [Syntax and selectors](recipes/css/syntax-and-selectors.html)
 * [Heights and widths](recipes/css/heights-and-widths.html)
@@ -34,7 +34,7 @@ layout: index
 * [Alignment and floating](recipes/css/syntax-and-selectors.html)
 * [Fonts and texts](recipes/css/syntax-and-selectors.html)
 
-##### CSS Advanced
+## CSS Advanced
 
 * [Box model](recipes/css/syntax-and-selectors.html)
 * [Flexbox](recipes/css/syntax-and-selectors.html)
@@ -42,22 +42,22 @@ layout: index
 * [Media Queries](recipes/css/syntax-and-selectors.html)
 * [CSS Grids](recipes/css/syntax-and-selectors.html)
 
-##### Web Basics
+## Web Basics
 
 * [Classical Web Applications](recipes/)
 * [Single Page Applications with AJAX](recipes/)
 * [Same Origin Policy](recipes/)
 
-##### JavaScript Basics
-##### JavaScript Advanced
+## JavaScript Basics
+## JavaScript Advanced
 
-##### Asynchronous JavaScript
+## Asynchronous JavaScript
 
 * [Callbacks](recipes/javascript/callbacks.html)
 * [Async](recipes/javascript/async.html)
 * [Promises](recipes/javascript/promises.html)
 
-##### AngularJS 1.x Basics
+## AngularJS 1.x Basics
 
 * [Features](recipes/)
 * [Model View Viewmodel (MVVM) Pattern](recipes/)
@@ -66,7 +66,7 @@ layout: index
 * [Controllers](recipes/)
 * [Services and Models](recipes/)
 
-##### AngularJS 1.x Unit Testing
+## AngularJS 1.x Unit Testing
 
 * [Setting up Karma](recipes/)
 * [Testing Config and Run](recipes/)
@@ -78,7 +78,7 @@ layout: index
 * [Testing Watchers and Events](recipes/)
 * [Test Driven Development](recipes/)
 
-##### AngularJS 1.x EndToEnd and Acceptance Testing
+## AngularJS 1.x EndToEnd and Acceptance Testing
 
 * [Setting up Protractor](recipes/)
 * [Testing Conditions](recipes/)
@@ -87,7 +87,7 @@ layout: index
 * [Testing with Gherkin](recipes/)
 * [Behaviour Driven Development](recipes/)
 
-##### System and API Design
+## System and API Design
 
 * [Domain Driven Design](recipes/)
 * [REST](recipes/)
