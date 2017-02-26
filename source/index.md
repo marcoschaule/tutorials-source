@@ -29,10 +29,10 @@ layout: index
 * [IDs and Classes](recipes/css/ids-and-classes.html)
 * [Selectors](recipes/css/selectors.html)
 * [Heights and Widths](recipes/css/heights-and-widths.html)
+* [Position](recipes/css/position.html)
+* [Display](recipes/css/display.html)
 * [Margin](recipes/css/margin.html)
 * [Padding](recipes/css/padding.html)
-* [Display](recipes/css/display.html)
-* [Position](recipes/css/position.html)
 * [Alignment and floating](recipes/css/syntax-and-selectors.html)
 * [Fonts and texts](recipes/css/syntax-and-selectors.html)
 

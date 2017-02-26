@@ -1,5 +1,5 @@
 ---
-title: Classes and IDs
+title: IDs and Classes
 date: 2017-02-24 11:00:00
 layout: post
 category:

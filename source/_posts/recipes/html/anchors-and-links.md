@@ -5,6 +5,7 @@ layout: post
 category:
 - recipes
 - html
+banner: html
 ---
 
 This post is about `anchor`s and links, which are anchors with a hyper

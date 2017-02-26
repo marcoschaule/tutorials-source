@@ -3,8 +3,10 @@ extends _partial/layout-default
 block content
   .cloak
     - var numCounter = 0, numCounterMod = 0;
+    - var arrPosts = site.posts.toArray();
+    - arrPosts = arrPosts.sort(function(a, b) { return b.date - a.date; });
     .row
-      each post in site.posts.toArray()
+      each post in arrPosts
         - var strURL = url_for(post.path);
         - numCounter += 1;
         - numCounterMod = Math.floor(numCounter / config.per_page);
@@ -20,6 +22,9 @@ block content
                     span.post-preview-category
                       span.post-preview-bullet &nbsp;&nbsp;/&nbsp;&nbsp;
                       a.post-preview-link(href="")= cat.name
+              if post.banner
+                .post-preview-banner(class='post-preview-banner-' + post.banner)
+                  img(src=config.root + 'images/banner-' + post.banner + '.png', title=post.banner)
               .post-preview-excerpt
                 != post.excerpt
               .post-preview-more: a(href=strURL) read
