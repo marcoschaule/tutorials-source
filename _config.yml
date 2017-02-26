@@ -75,6 +75,7 @@ deploy:
   branch: master
 
 # Kramdown markdown settings
+markdown: 'kramed'
 kramed:
   gfm: true
   pedantic: false

@@ -3,11 +3,12 @@ title: welcome
 date: 2017-02-23 19:27:20
 layout: index
 ---
+
 ## HTML Basics
 
 * [Doctype](recipes/html/doctype.html)
 * [Head and body elements](recipes/html/head-and-body-elements.html)
-* [Classes and IDs](recipes/html/classes-and-ids.html)
+* [IDs and Classes](recipes/html/ids-classes.html)
 * [Inline and block elements](recipes/html/inline-and-block-elements.html)
 * [Headings and paragraphs](recipes/html/headings-and-paragraphs.html)
 * [Anchors and links](recipes/html/anchors-and-links.html)
@@ -25,8 +26,9 @@ layout: index
 
 ## CSS Basics
 
-* [Syntax and selectors](recipes/css/syntax-and-selectors.html)
-* [Heights and widths](recipes/css/heights-and-widths.html)
+* [IDs and Classes](recipes/css/ids-and-classes.html)
+* [Selectors](recipes/css/selectors.html)
+* [Heights and Widths](recipes/css/heights-and-widths.html)
 * [Margin](recipes/css/margin.html)
 * [Padding](recipes/css/padding.html)
 * [Display](recipes/css/display.html)

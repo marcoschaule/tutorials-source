@@ -1,29 +1,33 @@
 extends _partial/layout-default
 
 block content
-  - var numCounter = 0, numCounterMod = 0;
-  .row
-    each post in site.posts.toArray()
-      - var strURL = url_for(post.path);
-      - numCounter += 1;
-      - numCounterMod = Math.floor(numCounter / config.per_page);
-      .row(class="post-preview-group post-preview-group-" + numCounterMod + ' ' + (0 === numCounterMod ? 'open' : ''))
-        .col-md-8.col-md-offset-2.relative
-          .post-preview
-            .post-preview-date
-              != date(post.date)
-            h2.post-preview-title
-              a(href=strURL)= post.title
-              if post.categories && post.categories.data
-                each cat in post.categories.data
-                  span.post-preview-category
-                    span.post-preview-bullet &nbsp;&nbsp;/&nbsp;&nbsp;
-                    a.post-preview-link(href="")= cat.name
-            .post-preview-excerpt
-              != post.excerpt
-            .post-preview-more: a(href=strURL) read
-  .row
-    .col-xs-6.left
-      a#get-older-post-previews(onclick="getOtherPostPreviews(true)") &lt; Older posts
-    .col-xs-6.right
-      a#get-newer-post-previews(onclick="getOtherPostPreviews(false)") Newer posts &gt;
+  .cloak
+    - var numCounter = 0, numCounterMod = 0;
+    .row
+      each post in site.posts.toArray()
+        - var strURL = url_for(post.path);
+        - numCounter += 1;
+        - numCounterMod = Math.floor(numCounter / config.per_page);
+        .row(class="post-preview-group post-preview-group-" + numCounterMod + ' ' + (0 === numCounterMod ? 'open' : ''))
+          .col-md-8.col-md-offset-2.relative
+            .post-preview
+              .post-preview-date
+                != date(post.date)
+              h2.post-preview-title
+                a(href=strURL)= post.title
+                if post.categories && post.categories.data
+                  each cat in post.categories.data
+                    span.post-preview-category
+                      span.post-preview-bullet &nbsp;&nbsp;/&nbsp;&nbsp;
+                      a.post-preview-link(href="")= cat.name
+              .post-preview-excerpt
+                != post.excerpt
+              .post-preview-more: a(href=strURL) read
+    script.
+      window.numCounterMax    = #{numCounter};
+      window.numCounterModMax = #{numCounterMod};
+    .row
+      .col-xs-6.left
+        a.get-post.get-post-older(onclick="getOtherPostPreviews(true)") &lt; Older posts
+      .col-xs-6.right
+        a.get-post.get-post-newer(onclick="getOtherPostPreviews(false)") Newer posts &gt;
