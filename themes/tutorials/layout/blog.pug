@@ -29,7 +29,21 @@ block content
       window.numCounterMax    = #{numCounter};
       window.numCounterModMax = #{numCounterMod};
     .row
-      .col-xs-6.left
-        a.get-post.get-post-older(onclick="getOtherPostPreviews(true)") &lt; Older posts
-      .col-xs-6.right
-        a.get-post.get-post-newer(onclick="getOtherPostPreviews(false)") Newer posts &gt;
+      .col-xs-12.center
+        a.get-post.get-post-oldest(
+            onclick="getOtherPostPreviews('oldest')"
+            title="Oldest posts"
+          ) &laquo;
+        a.get-post.get-post-older(
+            onclick="getOtherPostPreviews(true)"
+            title="Older posts"
+          ) &lt;
+        span.get-post-by-number
+        a.get-post.get-post-newer(
+            onclick="getOtherPostPreviews(false)"
+            title="Newer posts"
+          ) &gt;
+        a.get-post.get-post-newest(
+            onclick="getOtherPostPreviews('newest')"
+            title="Newest posts"
+          ) &raquo;
