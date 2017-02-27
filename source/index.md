@@ -33,7 +33,7 @@ layout: index
 * [Display](recipes/css/display.html)
 * [Margin](recipes/css/margin.html)
 * [Padding](recipes/css/padding.html)
-* [Alignment and floating](recipes/css/syntax-and-selectors.html)
+* [Alignment and floating](recipes/css/alignment-and-floating.html)
 * [Fonts and texts](recipes/css/syntax-and-selectors.html)
 
 ## CSS Advanced
