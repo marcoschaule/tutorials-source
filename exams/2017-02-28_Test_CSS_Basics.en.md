@@ -13,4 +13,3 @@ IDs and classes
 Including CSS
 -------------
 
-2. 
