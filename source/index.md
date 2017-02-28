@@ -4,6 +4,7 @@ date: 2017-02-23 19:27:20
 layout: index
 ---
 
+<!--
 ## HTML Basics
 
 * [Doctype](recipes/html/doctype.html)
@@ -45,14 +46,13 @@ layout: index
 * [Media Queries](recipes/css/syntax-and-selectors.html)
 * [CSS Grids](recipes/css/syntax-and-selectors.html)
 
+-->
 ## Web Basics
 
+* [HTML and CSS](recipes/web-basics/html-and-css.html)
 * [Classical Web Applications](recipes/)
 * [Single Page Applications with AJAX](recipes/)
 * [Same Origin Policy](recipes/)
-
-## JavaScript Basics
-## JavaScript Advanced
 
 ## Asynchronous JavaScript
 
