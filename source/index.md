@@ -28,6 +28,7 @@ layout: index
 
 * [IDs and Classes](recipes/css/ids-and-classes.html)
 * [Selectors](recipes/css/selectors.html)
+* [Units](recipes/css/units.html)
 * [Heights and Widths](recipes/css/heights-and-widths.html)
 * [Position](recipes/css/position.html)
 * [Display](recipes/css/display.html)

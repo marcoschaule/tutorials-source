@@ -1,4 +1,6 @@
+- var objChildren = { 'blog': 'recipes' };
 each strPath, strTitle in site.data.menu
   - var strActualPath = strPath === '/' ? 'index' : strPath
   - var isCurrent = url.indexOf(strActualPath) >= 0
-  a(href=url_for(strPath) class=(isCurrent ? 'active' : ''))= titlecase(strTitle)
+  - var isChild = objChildren[strTitle] && url.indexOf(objChildren[strTitle]) >= 0;
+  a(href=url_for(strPath) class=(isCurrent || isChild ? 'active' : ''))= titlecase(strTitle)

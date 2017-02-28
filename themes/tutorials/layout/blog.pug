@@ -16,7 +16,7 @@ block content
               .post-preview-date
                 != date(post.date)
               h2.post-preview-title
-                a(href=strURL)= post.title
+                a(href=strURL)= titlecase(post.title)
                 if post.categories && post.categories.data
                   each cat in post.categories.data
                     span.post-preview-category

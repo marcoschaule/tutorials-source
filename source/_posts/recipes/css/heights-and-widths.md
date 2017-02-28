@@ -8,108 +8,139 @@ category:
 ---
 
 This post is about `height`s and `width`s of elements. It also mentions
-the `overflow` attribute that can change the `size` of elements.
+the `overflow` attribute that can change the size of elements.
 <!-- more -->
 
 ## Overview
 
-* Heights and widths of elements are used to define how wide and long
-  they are on the screen.
-* You can define heights and widths in percentage, pixels, rem etc.
-* Using `rem` makes your web page scalable, since you relate the size
-  to a root element, usually the body font size. (`rem = root em`, the word
-  `em` come from the typographical expectation of the size of a capital M,
-  hence `em` = expected size of M.)
-* If width and height are equal, you can use the `size` property for both.
+The size elements `height` and `width`
 
-### Examples
+* **define the size** of an element on screen.
+* can be defined with **relative or absolute** units.
 
-HTML element:
+### How to tame an element's `width` or `height` by a parent:
+
+| Current element's position | any parent element needs to be   |
+|----------------------------|-----------------------------------|
+| static                     | static, relative, absolute, fixed |
+| relative                   | static, relative, absolute, fixed |
+| absolute                   | relative, absolute, fixed         |
+| fixed                      | _not possible_                    |
+
+
+### Example of `width` and `height` in `px`:
+
+HTML markup:
 ```html
-<div class="some-class">
-  <p>Some text ...</p>
+<!-- width and height are independent sizes -->
+<div style="width: 200px; height: 50px;"></div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 200px; height: 50px;"></div>
+</div>
+
+
+### Example of `width` and `height` in `%` without parent element:
+
+HTML markup:
+```html
+<!-- Here is no parent element, hence the width is relative to the result frame. -->
+<div style="width: 80%; height: 50px;"></div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 80%; height: 50px;"></div>
+</div>
+
+
+### Example of `width` and `height` in `%` with static parent element:
+
+HTML markup:
+```html
+<!-- The inner element and the parent element are both static. -->
+<!-- Hence the inner element is relative to the immediate parent in size. -->
+<div style="width: 400px; height: 100px;">
+  <div style="width: 50%; height: 50%;"></div>
 </div>
 ```
-
-CSS definition:
-```css
-.some-class {
-  width: 10rem;
-  padding: 5px;
-  background-color: lightgray;
-  border: 1px solid green;
-}
-```
-
-Result:
-<style>
-.some-class {
-  width: 10rem;
-  padding: 5px;
-  background-color: lightgray;
-  border: 1px solid gray;
-}
-</style>
+Visible result:
 <div class="tutorials-result">
-  <div class="some-class">
-    <p>Some text ...</p>
+  <div class="box-green" style="width: 400px; height: 100px;">
+    <div class="box-red" style="width: 50%; height: 50%;"></div>
   </div>
 </div>
 
-## Dependencies
 
-* Sizes generally are depending on the element's parent element.
-* If using `%` as unit, the child element defines its size depending
-  on the parent's size.
-* If using `rem` or `em`, the child element defines its size depending
-  on the root font size or the parent element's font size respectively.
-* Using `px` or other independent unites makes elements independent of
-  parent elements.
-* Elements with independent sizes - if bigger than parent - can only
-  overlap their parents if `overflow` is `visible`.
+### Example of `width` and `height` in `%` with static parent element:
 
-Examples of depending elements:
-
-HTML element:
+HTML markup:
 ```html
-// the outer div is 200px wide
-// the inner div is 100px wide
-<div class="outer">
-  <div class="inner">Text</div>
+<!-- The inner element is absolute and the parent element is static. -->
+<!-- Here the inner element takes the sizes of the frame as base. -->
+<div style="width: 400px; height: 100px; position: static;">
+  <div style="width: 80%; height: 100%; position: absolute;"></div>
 </div>
 ```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 400px; height: 100px; position: static;">
+    <div class="box-red" style="width: 80%; height: 100%; position: absolute;"></div>
+  </div>
+</div>
 
-CSS definition:
-```css
-.outer {
-  width: 200px;
-}
-.inner {
-  width: 50%;
-}
-```
 
-Examples of independent elements:
+## Overflow
 
-HTML element:
+The `overflow` property
+
+* **limits** the `width` or `height` of an element if `overflow` is `hidden`.
+* sets the maximum of `width` and `height` as the size of the maximum of
+  the parent if the child's sizes are overflowing.  
+  _Warning:_ This is **not** represented by the element's property when
+  accessed via JavaScript.
+
+
+### Example of `width` and `height` without limit:
+
+HTML markup:
 ```html
-// the outer div is 200px wide
-// the inner div is 400px wide
-<div class="outer">
-  <div class="inner">Text</div>
+<div style="width: 200px; height: 100px;">
+  <div style="width: 400px; height: 50px;"></div>
 </div>
 ```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 200px; height: 100px;">
+    <div class="box-red" style="width: 400px; height: 50px;"></div>
+  </div>
+</div>
 
-CSS definition:
-```css
-.outer {
-  width: 200px;
-}
-.inner {
-  width: 400px;
-}
+
+### Example of `width` and `height` with limit:
+
+HTML markup:
+```html
+<div style="width: 200px; height: 100px; overflow: hidden;">
+  <div style="width: 400px; height: 50px;"></div>
+</div>
 ```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 200px; height: 100px; overflow: hidden;">
+    <div class="box-red" style="width: 400px; height: 50px;"></div>
+  </div>
+</div>
+
+
+### Links
+
+* [CSS Height and Width](https://www.w3schools.com/css/css_dimension.asp) (w3school.com, english)
+* [width](https://developer.mozilla.org/en-US/docs/Web/CSS/width) (MDN, english)
+* [height](https://developer.mozilla.org/en-US/docs/Web/CSS/height) (MDN, english)
+* [CSS/Wertetypen/Zahlen, Maße und Maßeinheiten](https://wiki.selfhtml.org/wiki/CSS/Wertetypen/Zahlen,_Ma%C3%9Fe_und_Ma%C3%9Feinheiten) (SelfHTML, german)
+
 
 ## Best Practices
 
-* _Do_ use relative sizes (`%`, `rem` or `em`) whenever possible.
+* _Do_ use relative units for `width` and `height` if possible.
