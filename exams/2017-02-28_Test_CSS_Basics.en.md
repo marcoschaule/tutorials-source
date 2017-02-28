@@ -33,8 +33,8 @@ Margin and padding
   * The `padding` property defines the outer distance from another element.
     The background color is _not_ painted in the the padding area.
 
-Height, width and overflow
---------------------------
+Height and width
+----------------
 
 4. Which expression(s) is/are correct?
   * The `width` and `height` are limited by an `display: none;`.
