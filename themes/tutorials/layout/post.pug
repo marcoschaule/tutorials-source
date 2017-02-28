@@ -1,6 +1,7 @@
 extends _partial/layout-default
 
 block content
-  h1: != titlecase(page.title)
-  p:  != page.content
+  div(class='page-' + page.title)
+    h1: != titlecase(page.title)
+    p:  != page.content
 

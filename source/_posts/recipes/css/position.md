@@ -7,144 +7,163 @@ category:
 - css
 ---
 
-This post describes the `position` property, which defines the location
+This post describes the `position` property, which defines the position
 of an element relative to its environment elements.
 <!-- more -->
 
-## Overview
+## The `position`
 
 The `position` property
 
 * defines how an element interacts with its environment.
 * comes with the following values:
-  * static (default)
-  * relative
-  * fixed
-  * absolute
-* can define an element as relation for a child element (later).
+  * `static` (default)
+  * `relative`
+  * `fixed`
+  * `absolute`
+* can implicitly define the behaviour of child elements.
 
-### Examples
+### Example of `static`
 
-* **Example of `position: static;`**: 
-
-  Example:
-  ```html
-  <div class="example s150 red relative">
-    <div class="example s100 blue static">some blue text ...</div>
-    <div class="example s100 green static">some green text ...</div>
+HTML markup:
+```html
+<div class="box-green" style="width: 400px; height: 50px; position: static;">
+  <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+  <div class="box-red" style="width: 300px; height: 25px; position: static;"></div>
+</div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 400px; height: 50px; position: static;">
+    <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+    <div class="box-red" style="width: 300px; height: 25px; position: static;"></div>
   </div>
-  ```
+</div>
 
-  Result:
-  <div class="tutorials-result">
-    <div class="example s150 red relative">
-      <div class="example s100 blue static">some blue text ...</div>
-      <div class="example s100 green static">some green text ...</div>
-    </div>
+The value `static`
+* is the default value for the position.
+* does not change the flow and positioning of elements.
+  All elements are displayed one after another.
+
+
+### Example of `relative`
+
+HTML markup (relative position === static position):
+```html
+<div class="box-green" style="width: 400px; height: 50px; position: static;">
+  <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+  <div class="box-red" style="width: 300px; height: 25px; position: relative;"></div>
+</div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 400px; height: 50px; position: static;">
+    <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+    <div class="box-red" style="width: 300px; height: 25px; position: relative;"></div>
   </div>
+</div>
+
+HTML markup (element moved 10px from top relative to its static position):
+```html
+<div class="box-green" style="width: 400px; height: 50px; position: static;">
+  <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+  <div class="box-red" style="width: 300px; height: 25px; position: relative; top: 10px"></div>
+</div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 400px; height: 50px; position: static;">
+    <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+    <div class="box-red" style="width: 300px; height: 25px; position: relative; top: 10px"></div>
+  </div>
+</div>
+
+The value `relative`
+* behaves almost as the value `static` if element is not moved.
+* gives elements the ability to move _relative_ to their _static_ position.
+* can implicitly control the behaviour of child elements when
+  using properties like `z-index: <someValue>`, `position: absolute`,
+  position-properties like `top`, `right`, `bottom` or `left` etc.
+
+
+### Example of `absolute`
+
+HTML markup (absolute position === static position):
+```html
+<div class="box-green" style="width: 400px; height: 50px; position: static;">
+  <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+  <div class="box-red" style="width: 300px; height: 25px; position: absolute;"></div>
+</div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 400px; height: 50px; position: static;">
+    <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+    <div class="box-red" style="width: 300px; height: 25px; position: absolute;"></div>
+  </div>
+</div>
+
+HTML markup (element moved 10px from top relative to its parent's relative position):
+```html
+<div class="box-green" style="width: 400px; height: 50px; position: static;">
+  <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+  <div class="box-red" style="width: 300px; height: 25px; position: absolute; top: 10px;"></div>
+</div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-green" style="width: 400px; height: 50px; position: static;">
+    <div class="box-blue" style="width: 200px; height: 25px; position: static;"></div>
+    <div class="box-red" style="width: 300px; height: 25px; position: absolute; top: 10px;"></div>
+  </div>
+</div>
+
+_Note:_ The next parent is the result frame itself.
+
+The value `absolute`
+* behaves almost as the value `static` if element is not moved.
+* gives elements the ability to move _relative_ to their next
+  parent's _static_ position, that itself has `position: relative`.
+  If no parent has `position: relative`, it is moved _relative_
+  to the client window.
+* can implicitly control the behaviour of child elements (like `relative`)
+  when using properties like `z-index: <someValue>`, `position: absolute`,
+  position-properties like `top`, `right`, `bottom` or `left` etc.
+
+
+### Example of `fixed`
+
+HTML markup:
+```html
+<div class="box-red" style="width: 300px; height: 25px; position: absolute; z-index: 100;"></div>
+<div class="box-green scrollable" style="width: 800px; height: 100px; position: relative;">
+  <div class="box-blue" style="width: 200px; height: 200px; position: static;"></div>
+</div>
+```
+Visible result:
+<div class="tutorials-result">
+  <div class="box-red" style="width: 300px; height: 25px; position: absolute; z-index: 100;"></div>
+  <div class="box-green scrollable" style="width: 800px; height: 100px; position: relative;">
+    <div class="box-blue" style="width: 200px; height: 200px; position: static;"></div>
+  </div>
+</div>
+
+_Note:_ This is just a simulation of the `fixed` position. Usually, an element
+with a fixed position is relative to the client window.
+
+The value `fixed`
+* fixes elements on the client window, completely independent of the other elements.
+* can be a container for other static, relative or absolute elements.
+* can implicitly control the behaviour of child elements (like `relative`)
+  when using properties like `z-index: <someValue>`, `position: absolute`,
+  position-properties like `top`, `right`, `bottom` or `left` etc.
   
-  Explanation:
-  * The `static` value is the default value.
-  * Static positioned elements are not affected by the
-    `top`, `bottom`, `left`, and `right` properties.
 
-* **Example of `position: relative;`**: 
+### Links
 
-  Example with `left: 10px;`:
-  ```html
-  <div id="outer" style="position: relative; background-color: lightblue;">
-    <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-    <div id="relative" style="position: relative; background-color: lightgreen; left: 10px;">some text ...</div>
-  </div>
-  ```
+* [CSS Layout - The position Property](https://www.w3schools.com/css/css_positioning.asp) (w3school.com, english)
+* [position](https://developer.mozilla.org/de/docs/Web/CSS/position) (MDN, english)
+* [CSS/Eigenschaften/Positionierung/position](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position) (SelfHTML, german)
 
-  Result:
-  <div class="tutorials-result">
-    <div id="outer" style="position: relative; background-color: lightblue;">
-      <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-      <div id="relative" style="position: relative; background-color: lightgreen; left: 10px;">some text ...</div>
-    </div>
-  </div>
 
-  Example with `top: 10px;`:
-  ```html
-  <div id="outer" style="position: relative; background-color: lightblue;">
-    <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-    <div id="relative" style="position: relative; background-color: lightgreen; top: 10px;">some text ...</div>
-  </div>
-  ```
-
-  Result:
-  <div class="tutorials-result">
-    <div id="outer" style="position: relative; background-color: lightblue;">
-      <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-      <div id="relative" style="position: relative; background-color: lightgreen; top: 10px;">some text ...</div>
-    </div>
-  </div>
-  
-  Explanation:
-    * The `relative` value works like the `static` value, but 
-      relative positioned elements are affected by the
-      `top`, `bottom`, `left`, and `right` properties.
-    * When one of these four properties is changed, the element
-      moves according to its actual position independent of
-      the parent.
-
-* **Example of `position: absolute;`**: 
-
-  Example with `left: 10px;`:
-  ```html
-  <div id="outer" style="position: relative; background-color: lightblue;">
-    <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-    <div id="absolute" style="position: absolute; background-color: lightgreen; left: 10px;">some text ...</div>
-  </div>
-  ```
-
-  Result:
-  <div class="tutorials-result">
-    <div id="outer" style="position: relative; background-color: lightblue;">
-      <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-      <div id="absolute" style="position: absolute; background-color: lightgreen; left: 10px;">some text ...</div>
-    </div>
-  </div>
-
-  Example with `top: 10px;`:
-  ```html
-  <div id="outer" style="position: relative; background-color: lightblue;">
-    <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-    <div id="absolute" style="position: absolute; background-color: lightgreen; top: 10px;">some text ...</div>
-  </div>
-  ```
-
-  Result:
-  <div class="tutorials-result">
-    <div id="outer" style="position: relative; background-color: lightblue;">
-      <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-      <div id="absolute" style="position: absolute; background-color: lightgreen; top: 10px;">some text ...</div>
-    </div>
-  </div>
-  
-  Explanation:
-      * The `absolute` value positions the element relative to its next
-        non-static parent element when changing one or more of the
-        `top`, `bottom`, `left`, and `right` properties.
-      * When one of these four properties is changed, the element
-        moves according to its next non-static parent position.
-  
-* **Example of `position: absolute;`**: 
-
-  Example with `left: 10px;`:
-  ```html
-  <div id="outer" style="position: relative; background-color: lightblue;">
-    <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-    <div id="absolute" style="position: absolute; background-color: lightgreen; left: 10px;">some text ...</div>
-  </div>
-  ```
-
-  Result:
-  <div class="tutorials-result">
-    <div id="outer" style="position: relative; background-color: lightblue;">
-      <div id="normal" style="position: static; background-color: lightcoral;">some text ...</div>
-      <div id="absolute" style="position: absolute; background-color: lightgreen; left: 10px;">some text ...</div>
-    </div>
-  </div>
+## The positioning properties `top`, `right`, `bottom` and `left`
