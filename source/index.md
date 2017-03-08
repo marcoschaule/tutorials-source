@@ -54,8 +54,12 @@ layout: index
 * [Single Page Applications with AJAX](recipes/)
 * [Same Origin Policy](recipes/)
 
-## Asynchronous JavaScript
+## JavaScript and ECMAScript
 
+* [Classes](recipes/javascript/modules.html)
+* [Factories](recipes/javascript/modules.html)
+* [Modules](recipes/javascript/modules.html)
+* [Hoisting](recipes/javascript/hoisting.html)
 * [Callbacks](recipes/javascript/callbacks.html)
 * [Async](recipes/javascript/async.html)
 * [Promises](recipes/javascript/promises.html)
