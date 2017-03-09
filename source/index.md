@@ -54,15 +54,21 @@ layout: index
 * [Single Page Applications with AJAX](recipes/)
 * [Same Origin Policy](recipes/)
 
-## JavaScript and ECMAScript
+## JavaScript (ECMAScript 5)
 
-* [Classes](recipes/javascript/modules.html)
-* [Factories](recipes/javascript/modules.html)
-* [Modules](recipes/javascript/modules.html)
-* [Hoisting](recipes/javascript/hoisting.html)
+* [Scope and Hoisting](recipes/javascript/hoisting.html)
+* [Classes](recipes/javascript/classes.html)
+* [Prototypes](recipes/javascript/prototypes.html)
+* [Factories](recipes/javascript/factories.html)
 * [Callbacks](recipes/javascript/callbacks.html)
 * [Async](recipes/javascript/async.html)
 * [Promises](recipes/javascript/promises.html)
+
+## JavaScript (ECMAScript)
+
+* [Classes](recipes/javascript/classes-ecmascript6.html)
+* [Factories](recipes/javascript/factories-ecmascript6.html)
+* [Modules](recipes/javascript/modules.html)
 
 ## AngularJS 1.x Basics
 
