@@ -56,15 +56,17 @@ layout: index
 
 ## JavaScript (ECMAScript 5)
 
-* [Scope and Hoisting](recipes/javascript/hoisting.html)
-* [Classes](recipes/javascript/classes.html)
-* [Prototypes](recipes/javascript/prototypes.html)
-* [Factories](recipes/javascript/factories.html)
+* [Functions](recipes/javascript/functions.html)
+* [Scope](recipes/javascript/scope.html)
+* [Hoisting](recipes/javascript/hoisting.html)
 * [Callbacks](recipes/javascript/callbacks.html)
 * [Async](recipes/javascript/async.html)
 * [Promises](recipes/javascript/promises.html)
+* [Classes](recipes/javascript/classes.html)
+* [Prototypes](recipes/javascript/prototypes.html)
+* [Factories](recipes/javascript/factories.html)
 
-## JavaScript (ECMAScript)
+## JavaScript (ECMAScript 6)
 
 * [Classes](recipes/javascript/classes-ecmascript6.html)
 * [Factories](recipes/javascript/factories-ecmascript6.html)
