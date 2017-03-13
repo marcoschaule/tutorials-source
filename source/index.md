@@ -62,6 +62,9 @@ layout: index
 * [Callbacks](recipes/javascript/callbacks.html)
 * [Async](recipes/javascript/async.html)
 * [Promises](recipes/javascript/promises.html)
+* [Generator](recipes/javascript/generators.html)
+* [Observables](recipes/javascript/observables.html)
+* [Fibers and Futures](recipes/javascript/figers-and-futures.html)
 * [Classes](recipes/javascript/classes.html)
 * [Prototypes](recipes/javascript/prototypes.html)
 * [Factories](recipes/javascript/factories.html)
@@ -107,3 +110,12 @@ layout: index
 * [Domain Driven Design](recipes/)
 * [REST](recipes/)
 * [Model View Controller (MVC) Pattern](recipes/)
+
+## Software Design Patterns
+
+* Creational patterns
+* Structural patterns
+* Behavioral patterns
+* Concurrency patterns
+* Cloud Patterns
+* [#Overview](http://cloudpatterns.org/compound_patterns/overview)

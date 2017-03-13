@@ -166,15 +166,15 @@ function someFunction(arg1, arg2, callback) {
 ```
 
 
-## Callback Hell
+## Callback Hell or Pyramid of Doom
 
 When working with callbacks, you can run into so called
-**callback hells**. The callback hell is the nested calling
-of callbacks.
+**callback hells** or **Pyramid of Doom**.
+The callback hell is the nested calling of callbacks.
 
 For instance:
 
-``` javascript
+```javascript
 function someFunction(callback1) {
   // do something ...
   callback1(function(callback2) {
@@ -193,7 +193,7 @@ function someFunction(callback1) {
 To avoid callbacks, there are several methods. One of them to call the
 following function by name within the current function:
 
-``` javascript
+```javascript
 // define the functions to call each other:
 function someFunction() {
   // do something ...
