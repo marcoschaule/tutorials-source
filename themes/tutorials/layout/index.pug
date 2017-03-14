@@ -3,5 +3,4 @@ extends _partial/layout-default
 block content
   div(class='page-' + page.title)
     h1= titlecase(page.title)
-    .columns-2
-      div!= page.content
+    .columns-2!= page.content
