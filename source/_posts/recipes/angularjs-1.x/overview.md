@@ -342,3 +342,10 @@ var SomeService = $injector.get('SomeService');
 * Two-Way Data Binding
 * Interpolation
 
+## Links
+
+* [AngularJS - Conceptual Overview](https://docs.angularjs.org/guide/concepts)
+
+## Notes
+
+* Used Angular version: v1.6.3
