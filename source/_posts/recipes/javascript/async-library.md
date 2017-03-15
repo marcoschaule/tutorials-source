@@ -1,5 +1,5 @@
 ---
-title: The async framework
+title: The Async Library
 date: 2017-02-24 11:00:00
 layout: post
 category:
@@ -232,16 +232,19 @@ The `async.waterfall` works similar to the `async.series` function:
 Example:
 
 ```javascript
+// called 1st
 function myFunction1(myInnerCallback) { // called 1st
   // do something ...
   myInnerCallback(null, 'someValue');
 }
-function myFunction2(strArgPrevious, myInnerCallback) { // called 2nd
+// called 2nd
+function myFunction2(strArgPrevious, myInnerCallback) {
   console.log(strArgPrevious); // logs 'someValue'
   // do something ...
   myInnerCallback(null, 'someValue1', 'someValue2');
 }
-function myFunction3(strArgPrevious1, strArgPrevious2, myInnerCallback) { // called 3rd
+// called 3rd
+function myFunction3(strArgPrevious1, strArgPrevious2, myInnerCallback) {
   console.log(strArgPrevious1); // logs 'someValue1'
   console.log(strArgPrevious2); // logs 'someValue2'
   // do something ...

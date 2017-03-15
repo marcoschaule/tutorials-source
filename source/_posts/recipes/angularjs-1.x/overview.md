@@ -47,11 +47,11 @@ A template is an HTML file with additional markup.
 For example:
 
 ```html
-<body>
+<script type="text/ng-template" id="someTemplate.html">
   <div ng-if="someVar === true">
     {{someOtherVar}}
   </div>
-</body>
+</script>
 ```
 
 
@@ -101,10 +101,9 @@ user sees on screen.
 
 ### Scope
 
-A view is a DOM part that represents the template
-combined with the model to create the result the
-user sees on screen.
-
+The scope is the influence area of a controller, in which
+model data can be changed and controller functions can be called.
+ 
 For example in the controller:
 ```javascript
 vm.objUser = {
@@ -201,7 +200,7 @@ angular.module('myModule').factory('MyService', function($http) {
 });
 ```
 
-Build-in services are for example:  
+Built-in services are for example:  
 `$scope`, `$rootScope`, `$location`, `$q`, `$timeout`, `$window`, `$document`,
 `$http`, `$httpBackend` etc.
 
@@ -215,7 +214,7 @@ of expressions.
 <ul>
   <!-- "currency" is a build-in filter -->
   <li ng-repeat="objPayment in arrPayments">
-    {{ objPayment.numAmound | currency }}
+    {{ objPayment.numAmount | currency }}
   </li>
 </ul>
 <ul>
@@ -226,7 +225,7 @@ of expressions.
 </ul>
 ```
 
-Build-in filters are:  
+Built-in filters are:  
 `currency`, `date`, `filter`, `json`, `limitTo`,
 `lowercase`, `number`, `orderBy`, `uppercase`
 
@@ -237,7 +236,7 @@ A directive is a function that extends HTML
 with custom elements and attributes, which
 should be used for DOM manipulations.
 
-Example of using build-in directives in the template:
+For example:
 ```html
 <ul>
   <!-- "ng-repeat" is a build-in directive -->
@@ -249,7 +248,7 @@ Example of using build-in directives in the template:
 </ul>
 ```
 
-Build-in directives are for example:  
+Built-in directives are for example:  
 `ng-app`, `ng-controller`, `ng-if`, `ng-show`, `ng-hide`,
 `ng-bind`, `ng-bind-html`, `ng-model`, `ng-click`, `ng-blur`,
 but also `textarea`, `select` etc. 
