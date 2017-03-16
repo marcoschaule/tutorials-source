@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: AngularJS 1.x Features
 date: 2017-03-13 19:12:00
 layout: post
 category:
@@ -7,41 +7,41 @@ category:
 - AngularJS 1.x
 ---
 
-## AngularJS Features
+## Overview
 
 The main features of AngularJS 1.x are:
 
 <div class="row">
   <div class="col-md-4">
     <ul>
-      <li><a title="Template" href="recipes/angularjs-1.x/overview.html#Template">Template</a></li>
-      <li><a title="Expressions" href="recipes/angularjs-1.x/overview.html#Expressions">Expressions</a></li>
-      <li><a title="Model" href="recipes/angularjs-1.x/overview.html#Model">Model</a></li>
-      <li><a title="View" href="recipes/angularjs-1.x/overview.html#View">View</a></li>
-      <li><a title="Scope" href="recipes/angularjs-1.x/overview.html#Scope">Scope</a></li>
+      <li><a title="Template" href="recipes/angularjs-1.x/angular-1.x-features.html#Template">Template</a></li>
+      <li><a title="Expressions" href="recipes/angularjs-1.x/angular-1.x-features.html#Expressions">Expressions</a></li>
+      <li><a title="Model" href="recipes/angularjs-1.x/angular-1.x-features.html#Model">Model</a></li>
+      <li><a title="View" href="recipes/angularjs-1.x/angular-1.x-features.html#View">View</a></li>
+      <li><a title="Scope" href="recipes/angularjs-1.x/angular-1.x-features.html#Scope">Scope</a></li>
     </ul>
   </div>
   <div class="col-md-4">
     <ul>
-      <li><a title="Module" href="recipes/angularjs-1.x/overview.html#Module">Module</a></li>
-      <li><a title="Controller" href="recipes/angularjs-1.x/overview.html#Controller">Controller</a></li>
-      <li><a title="Service" href="recipes/angularjs-1.x/overview.html#Service">Service</a></li>
-      <li><a title="Filter" href="recipes/angularjs-1.x/overview.html#Filter">Filter</a></li>
-      <li><a title="Directive" href="recipes/angularjs-1.x/overview.html#Directive">Directive</a></li>
+      <li><a title="Module" href="recipes/angularjs-1.x/angular-1.x-features.html#Module">Module</a></li>
+      <li><a title="Controller" href="recipes/angularjs-1.x/angular-1.x-features.html#Controller">Controller</a></li>
+      <li><a title="Service" href="recipes/angularjs-1.x/angular-1.x-features.html#Service">Service</a></li>
+      <li><a title="Filter" href="recipes/angularjs-1.x/angular-1.x-features.html#Filter">Filter</a></li>
+      <li><a title="Directive" href="recipes/angularjs-1.x/angular-1.x-features.html#Directive">Directive</a></li>
     </ul>
   </div>
   <div class="col-md-4">
     <ul>
-      <li><a title="Component" href="recipes/angularjs-1.x/overview.html#Component">Component</a></li>
-      <li><a title="Compiler" href="recipes/angularjs-1.x/overview.html#Compiler">Compiler</a></li>
-      <li><a title="Linker" href="recipes/angularjs-1.x/overview.html#Linker">Linker</a></li>
-      <li><a title="Injector" href="recipes/angularjs-1.x/overview.html#Injector">Injector</a></li>
+      <li><a title="Component" href="recipes/angularjs-1.x/angular-1.x-features.html#Component">Component</a></li>
+      <li><a title="Compiler" href="recipes/angularjs-1.x/angular-1.x-features.html#Compiler">Compiler</a></li>
+      <li><a title="Linker" href="recipes/angularjs-1.x/angular-1.x-features.html#Linker">Linker</a></li>
+      <li><a title="Injector" href="recipes/angularjs-1.x/angular-1.x-features.html#Injector">Injector</a></li>
     </ul>
   </div>
 </div>
 
 
-### Template
+## Template
 
 A template is an HTML file with additional markup.
 For example:
@@ -55,7 +55,7 @@ For example:
 ```
 
 
-### Expressions
+## Expressions
 
 An expression are JavaScript-like code snippets to access
 scope variables and functions within a template.
@@ -73,7 +73,7 @@ For example:
 ```
 
 
-### Model
+## Model
 
 The model is an object that consists of the data
 to be displayed in the view and to be interacted
@@ -86,7 +86,7 @@ var objUser = {
 };
 ```
 
-### View
+## View
 
 A view is a DOM part that represents the template
 combined with the model to create the result the
@@ -99,37 +99,7 @@ user sees on screen.
 </iframe>
 
 
-### Scope
-
-The scope is the influence area of a controller, in which
-model data can be changed and controller functions can be called.
- 
-For example in the controller:
-```javascript
-vm.objUser = {
-  strUsername: 'JonDoe',
-  strEmail: 'jondoe@email.web'
-};
-```
-
-and in the template:
-```html
-<div>
-  <span>Username:</span>
-  <span>{{ vm.objUser.strUsername }}</span>
-</div>
-<div>
-  <span>Email:</span>
-  <span>{{ vm.objUser.strEmail }}</span>
-</div>
-```
-
-The variable `vm` stands for **View Model** and
-represents the controller itself. It lives on the
-scope variable `$scope.vm === vm`.
-
-
-### Module
+## Module
 
 A module is a function that represents a container
 to encapsulate different parts of the application.
@@ -144,7 +114,7 @@ angular.module('myModule')/* add features */;
 ```
 
 
-### Controller
+## Controller
 
 A controller is a function to interact with the
 model and the view. For example:
@@ -169,13 +139,51 @@ angular.module('myModule').controller('MyController', function() {
 
 Functions can be called in the template like:
 ```html
-<div>
+<div ng-controller="MyController as vm">
   <button ng-click="vm.someFunction()">Do Something</button>
 </div>
 ```
 
+_Note:_ Please be aware of the `<ControllerName> as <ViewModelName>`
+instantiation. This is necessary, if you use `var vm = this` within
+the controller.
 
-### Service
+
+## Scope
+
+The scope is the influence area of a controller, in which
+model data can be changed and controller functions can be called.
+ 
+For example somwhere in the controller `MyController`:
+```javascript
+vm.objUser = {
+  strUsername: 'JonDoe',
+  strEmail: 'jondoe@email.web'
+};
+```
+
+and in the template:
+```html
+<!-- here the scope of "MyController" starts -->
+<div ng-controller="MyController as vm">
+  <div>
+    <span>Username:</span>
+    <span>{{ vm.objUser.strUsername }}</span>
+  </div>
+  <div>
+    <span>Email:</span>
+    <span>{{ vm.objUser.strEmail }}</span>
+  </div>
+</div>
+<!-- here the scope of "MyController" ends -->
+```
+
+_Note:_ The variable `vm` stands for **View Model** and
+represents the controller itself. It lives on the
+scope variable `$scope.vm === vm`.
+
+
+## Service
 
 A service is a function that represents a
 container for stateful (session) data and
@@ -205,7 +213,7 @@ Built-in services are for example:
 `$http`, `$httpBackend` etc.
 
 
-### Filter
+## Filter
 
 A filter is a function to format values
 of expressions.
@@ -230,7 +238,7 @@ Built-in filters are:
 `lowercase`, `number`, `orderBy`, `uppercase`
 
 
-### Directive
+## Directive
 
 A directive is a function that extends HTML
 with custom elements and attributes, which
@@ -253,7 +261,7 @@ Built-in directives are for example:
 `ng-bind`, `ng-bind-html`, `ng-model`, `ng-click`, `ng-blur`,
 but also `textarea`, `select` etc. 
 
-### Component
+## Component
 
 A component is an extended representation of
 a controller, template and a directive combined,
@@ -282,7 +290,7 @@ angular.module('myModule').component('myComponent', {
 ```
 
 
-### Compiler
+## Compiler
 
 The compiler is an Angular function for parsing the template
 and for instantiating template directives and expressions.
@@ -297,7 +305,7 @@ var linkFunc     = $compile(strHTML);
 ```
 
 
-### Linker
+## Linker
 
 The linker is an Angular function for linking the compiled
 template with the scope model data together to create the view.
@@ -316,7 +324,7 @@ getElementById('someID').appendChild(elForView);
 ```
 
 
-### Injector
+## Injector
 
 The Injector is a function with the job to inject dependencies where-ever
 it is used in the code. For controllers, services, directives etc. the
