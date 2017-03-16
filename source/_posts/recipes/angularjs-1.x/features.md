@@ -117,7 +117,7 @@ angular.module('myModule')/* add features */;
 ## Controller
 
 A controller is a function to interact with the
-model and the view. For example:
+model and the view.
 For example:
 
 ```javascript
@@ -147,6 +147,9 @@ Functions can be called in the template like:
 _Note:_ Please be aware of the `<ControllerName> as <ViewModelName>`
 instantiation. This is necessary, if you use `var vm = this` within
 the controller.
+The variable `vm` stands for **View Model** and
+represents the controller instance itself. It lives on the
+scope variable `$scope.vm === vm`.
 
 
 ## Scope
@@ -177,10 +180,6 @@ and in the template:
 </div>
 <!-- here the scope of "MyController" ends -->
 ```
-
-_Note:_ The variable `vm` stands for **View Model** and
-represents the controller itself. It lives on the
-scope variable `$scope.vm === vm`.
 
 
 ## Service
@@ -342,17 +341,10 @@ var SomeService = $injector.get('SomeService');
 ```
 
 
-## AngularJS principles
-
-* MVVM Pattern
-* Dependency Injection
-* Two-Way Data Binding
-* Interpolation
-
 ## Links
+* [AngularJS - Conceptual Overview](https://docs.angularjs.org/guide/concepts) (docs.angularjs.org)
+* [5 Awesome AngularJS Features](https://code.tutsplus.com/tutorials/5-awesome-angularjs-features--net-25651) (code.tutsplus.com)
 
-* [AngularJS - Conceptual Overview](https://docs.angularjs.org/guide/concepts)
 
 ## Notes
-
 * Used Angular version: v1.6.3
