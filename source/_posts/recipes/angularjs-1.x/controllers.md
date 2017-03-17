@@ -10,21 +10,24 @@ category:
 
 ## Overview
 
-An Angular controller is a function to connect the
-Model with the View via the so called ViewModel.
-The controller itself is unaware of the view, meaning
-it doesn't "recognize" if there is one view, are two views
-or multiple views used with the controller.
-That makes the controller very easy to be instantiated
-and to be tested.
+An Angular **controller** is a class/function that
+* **connects the Model with the View** via the so
+  called ViewModel,
+* itself **is unaware of the view**, meaning it
+  doesn't "recognize" if there is one view,
+  are two views or multiple views used with
+  the controller.
+* **is instantiated for each view** it is used with, and
+* **can be tested separately** from the view and
+  the model it uses.
 
-Here an example of a controller:
+Here an example of a controller definition:
 ```javascript
 angular
   .module('myModule')
   .controller('MyController', MyController);
 
-function MyController(SomeService) {
+function MyController(UserService, SomeService) {
   var $ctrl = this;
 
   // some local variables that are
@@ -34,7 +37,8 @@ function MyController(SomeService) {
 
   // bind the service variables for
   // a view to access them
-  $ctrl.serv = SomeService.exports;
+  $ctrl.objUser = UserService.exports;
+  $ctrl.objSome = SomeService.exports;
 
   // bind the controller functions
   // for the view to call them
@@ -53,7 +57,27 @@ function MyController(SomeService) {
 }
 
 // property injection
-MyController.$inject = ['SomeService'];
+MyController.$inject = ['UserService', 'SomeService'];
+```
+
+After defining a controller like this, it can be used like:
+
+```html
+<div ng-controller="MyController as vm">
+  <!-- ... -->
+</div>
+```
+
+Or instead it can be used in the routing like:
+
+```javascript
+$routeProvider
+  .when('/', {
+    templateUrl: 'some-template.html',
+    controller : 'MyController as vm'
+  })
+  // ...
+  ;
 ```
 
 

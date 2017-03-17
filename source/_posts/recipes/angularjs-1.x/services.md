@@ -10,7 +10,7 @@ category:
 
 ## Overview
 
-An Angular service is an object that
+An Angular **service** is a class/function that
 * **contains variables and functions** to handle non-view
   related interactions (like HTTP calls),
 * **are singletons**, meaning no matter how often they are
@@ -18,7 +18,7 @@ An Angular service is an object that
 * **stores data in memory** as long as the page is not reloaded,
   which they should be used for instead of controllers,
 
-Here an example of a controller:
+Here an example of a service definition:
 ```javascript
 angular
   .module('myModule')
@@ -34,7 +34,10 @@ function MyService(SomeOtherDependency) {
 
   // bind exposed export variables to the service 
   // to use them in this service injecting items
-  service.serv = SomeOtherDependency.exports;
+  service.exports              = {};
+  service.exports.someVar      = 'someValue';
+  service.exports.someOtherVar = 'someOtherValue';
+  service.exports.someThirdVar = SomeOtherDependency.exports.someThirdVar;
 
   // bind exposed export functions to the service 
   // to use them in this service injecting items
@@ -58,6 +61,30 @@ function MyService(SomeOtherDependency) {
 // property injection
 MyService.$inject = ['SomeOtherDependency'];
 ```
+
+After defining a Service like that, it can be injected like:
+
+```javascript
+angular
+  .module('myModule')
+  .controller('MyController', function(MyService) {
+    
+  });
+```
+
+
+## Built-in Services
+
+Built-in services are for instance:
+* `$http` for HTTP interaction
+* `$filter` for filtering within the code
+* `$window` as a wrapper for the `window` object
+* `$document` as a wrapper for the `window.document` object
+* `$rootScope` for accessing the root scope object
+* `$scope` for accessing current controller's scope
+* `$timeout` as a wrapper for the `setTimeout` function
+* `$q` as a wrapper for the `Q`-Library for promise handling
+* etc.
 
 
 ## Links
